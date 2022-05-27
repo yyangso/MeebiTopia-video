@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>MeebiTopia</title>
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Electrolize&family=Luckiest+Guy&display=swap" rel="stylesheet">
+	<script>
+        $(function(){
+            $('.multiple-items1').slick({
+                rows: 1, // 몇 줄
+                infinite: true, // 무한반복
+                slidesToShow: 7, // 한번에 보여지는 갯수
+                slidesToScroll: 1, // 한번에 넘겨지는 갯수
+                arrows: false, // 넘기기 버튼 여부
+                speed: 2000,
+                autoplay: true, // 자동 시작
+                autoplaySpeed: 500, // 자동넘기기 시간
+                dots: false, //네비게이션 버튼
+                pauseOnHover: false, // 마우스 호버 시 슬라이드 멈춤
+                centerMode: true,
+                centerPadding: '60px',
+                variableWidth: true,   
+            });
+            $('.multiple-items2').slick({
+                rows: 1, // 몇 줄
+                rtl: true,
+                infinite: true, // 무한반복
+                slidesToShow: 7, // 한번에 보여지는 갯수
+                slidesToScroll: 1, // 한번에 넘겨지는 갯수
+                arrows: false, // 넘기기 버튼 여부
+                speed: 2000,
+                autoplay: true, // 자동 시작
+                autoplaySpeed: 500, // 자동넘기기 시간
+                dots: false, //네비게이션 버튼
+                pauseOnHover: false, // 마우스 호버 시 슬라이드 멈춤
+                centerMode: true,
+                centerPadding: '60px',
+                variableWidth: true,
+            });
+
+            $('.slide-box').each(function(i,el){
+		        i+=1;	
+		        var wrap1 = $(el).find('.multiple-items1').addClass('items1'+ i) 
+		        var wrap2 = $(el).find('.multiple-items2').addClass('items2'+ i) 
+
+	        });
+			$('.multiple-items3').slick({
+                rows: 1, // 몇 줄
+                infinite: true, // 무한반복
+                slidesToShow: 7, // 한번에 보여지는 갯수
+                slidesToScroll: 1, // 한번에 넘겨지는 갯수
+                arrows: false, // 넘기기 버튼 여부
+                speed: 2000,
+                autoplay: true, // 자동 시작
+                autoplaySpeed: 500, // 자동넘기기 시간
+                dots: false, //네비게이션 버튼
+                pauseOnHover: false, // 마우스 호버 시 슬라이드 멈춤
+                centerMode: true,
+                centerPadding: '60px',
+                variableWidth: true,   
+            });
+        });
+    </script>
+</head>
+<body class="before-load" style="background-color: black;">
+	<div class="loading">
+		<svg class="loading-circle"> 
+			<circle cx="50%" cy="50%" r="25"></circle>
+		</svg>
+	</div>
+	<div class="container">
+		<nav class="global-nav">
+			<div class="global-nav-links">
+				<a href="#" class="global-nav-item">Rooms</a>
+				<a href="#" class="global-nav-item">Ideas</a>
+				<a href="#" class="global-nav-item">Stores</a>
+				<a href="#" class="global-nav-item">Contact</a>
+			</div>
+		</nav>
+		<nav class="local-nav">
+			<div class="local-nav-links">
+				<a href="#" class="product-name">MeebiTopia</a>
+				<a href="#" class="fa-brands fa-twitter fa-3x"></a>
+				<a href="#" class="fa-brands fa-youtube fa-3x"></a>
+				<a href="#" class="fa-brands fa-discord fa-3x"></a>
+				<a href="#" class="fa-solid fa-mobile-screen-button fa-3x"></a>
+			</div>
+		</nav>
+
+		<section class="scroll-section" id="scroll-section-0">
+			<h1>MeebiTopia <br>로고 이미지 시퀀스</h1>
+			<div class="sticky-elem sticky-elem-canvas">
+				<canvas id="video-canvas-0" width="1920" height="1080"></canvas>
+			</div>
+		</section>
+		<section class="scroll-section" id="scroll-section-1">
+			<div class="video-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Y9NX0gxIkso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay="1" mute="1">
+				
+				</iframe>
+			</div>
+		</section>
+		<section class="scroll-section" id="scroll-section-2">
+			<h2>야자수 나무 열리는 이미지 시퀀스</h2>
+			<div class="sticky-elem sticky-elem-canvas">
+				<canvas id="video-canvas-1" width="1920" height="1080"></canvas>
+			</div>
+		</section>
+		<section class="scroll-section" id="scroll-section-3">
+			<div class="slide-box">
+				<h3>MeebiTopia</h3>
+				<div class="for_slick_slider multiple-items1">
+					<div class="items">
+						<img src="images/1.png" alt="">   
+						<div class="overlay"></div> 
+					</div>
+					<div class="items">
+						<img src="images/2.png" alt="">
+						<div class="overlay"></div>     
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+					<div class="items">
+						<img src="images/4.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/5.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+					<div class="items">
+						<img src="images/5.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+				</div>
+				<div class="for_slick_slider multiple-items2" dir="rtl">
+					<div class="items">
+						<img src="images/1.png" alt="">   
+						<div class="overlay"></div> 
+					</div>
+					<div class="items">
+						<img src="images/2.png" alt="">
+						<div class="overlay"></div>     
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+					<div class="items">
+						<img src="images/4.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/5.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+					<div class="items">
+						<img src="images/5.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="scroll-section" id="scroll-section-4">
+			<div class="mid-message-box">
+			<p class="mid-message">
+				<strong>Text + 이미지 </strong><br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore corporis perspiciatis, dolorum odio corrupti, magnam libero ratione obcaecati, quia in id. Reiciendis tempora voluptates nobis quidem fuga aliquam expedita, neque quisquam impedit similique! Reprehenderit natus quam mollitia adipisci qui, recusandae aliquam tempora illo temporibus labore ullam incidunt minus ab perferendis ad accusantium, voluptates, cupiditate saepe perspiciatis laboriosam in. Non nesciunt corrupti minima, maxime minus libero corporis cupiditate commodi facere praesentium quasi totam voluptatum animi laboriosam quidem, ullam quis voluptates eius laudantium. Aliquam ipsa consectetur voluptas ex impedit non recusandae! Quos cumque fuga omnis molestiae id. Quas eaque cumque dignissimos.
+			</p>
+		</div>
+		</section>
+		<section class="scroll-section" id="scroll-section-5">
+			<div class="no-message-box">
+			<p class="no-message">
+				<strong>캐릭터 만들어 지는 과정 이미지</strong>
+			</p>
+			<img src="./images/1.png" width="250" height="200">
+		</div>
+		</section>
+		<section class="scroll-section" id="scroll-section-6">
+			<div class="slide-box">
+				<h3>MeebiTopia 캐릭터 슬라이드</h3>
+				<div class="for_slick_slider multiple-items3">
+					<div class="items">
+						<img src="images/1.png" alt="">   
+						<div class="overlay"></div> 
+					</div>
+					<div class="items">
+						<img src="images/2.png" alt="">
+						<div class="overlay"></div>     
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+					<div class="items">
+						<img src="images/4.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/5.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+					<div class="items">
+						<img src="images/5.png" alt=""> 
+						<div class="overlay"></div>    
+					</div>
+					<div class="items">
+						<img src="images/3.png" alt="">  
+						<div class="overlay"></div>   
+					</div>
+				</div>
+			</section>
+		<section class="scroll-section" id="scroll-section-7">
+			<div class="question-box">
+				<h3>자주하는 질문</h3>
+				<ul class="question">
+					<li>when mint?</li>
+					<li>what is the mint price?</li>
+					<li>how does the mint work?</li>
+					<li>what are the requirements to mint?</li>
+					<li>what is the claim limit for BAYC and MAYC holders?</li>
+					<li>I kyced but didn't approve my wallet yet. can I still mint?</li>
+					<li>I have a question that's not answered here!</li>
+					<li>how does the mint work?</li>
+					<li>what are the requirements to mint?</li>
+					<li>what is the claim limit for BAYC and MAYC holders?</li>
+				</ul>
+			</div>
+		</section>
+		<section class="scroll-section" id="scroll-section-8">
+			<h4>티켓 건네주는 시퀀스</h4>
+			<div class="sticky-elem sticky-elem-canvas">
+				<canvas id="video-canvas-2" width="1920" height="1080"></canvas>
+			</div>
+		</section>
+
+
+		<footer class="footer">
+			2022, 또또코딩
+		</footer>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script src="https://kit.fontawesome.com/246bf15a6b.js" crossorigin="anonymous"></script>
+</body>
+</html>
