@@ -104,7 +104,7 @@
             objs: {
                 container: document.querySelector('#scroll-section-7'),
                 content: document.querySelector('.question-box'),
-                items: document.querySelectorAll('question')
+                items: document.querySelectorAll('.question')
             }
         },
         {
@@ -272,6 +272,7 @@
             document.getElementById(this.id + '-toggle').textContent = '-';
         }
     }
+
     sceneInfo[7].objs.items.forEach(item => item.addEventListener('click', openCloseAnswer));
 
     function scrollLoop() {

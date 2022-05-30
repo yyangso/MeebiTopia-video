@@ -138,27 +138,25 @@ body.before-load {
     height: 100;
     padding-top: 0;
 }
+.question-box {
+    position: relative;
+    color: #ccc;
+    margin: 0 auto;
+}
 .answer {
     display: none;
-    padding-bottom: 30px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 2rem;
 }
 #faq-title {
-    font-size: 25px;
+    font-size: 2rem;
 }
 .faq-content {
     border-bottom: 1px solid #e0e0e0;
 }
-.question-box{
-    position: relative;
-    z-index: 17;
-    max-width: 1000px;
-    height: 100%;
-    margin: 0 auto;
-    font-size: 2rem;
-    color: #888;
-}
 .question {
-    font-size: 19px;
+    font-size: 2rem;
     padding: 30px 0;
     cursor: pointer;
     border: none;
@@ -168,7 +166,7 @@ body.before-load {
     text-align: left;
 }
 .question:hover {
-    color: #2962ff;
+    color: #ccc;
   }
   [id$="-toggle"] {
     margin-right: 15px;
@@ -211,7 +209,7 @@ body.before-load {
 #show-scene-4 #scroll-section-4 .sticky-elem,
 #show-scene-5 #scroll-section-5 .sticky-elem,
 #show-scene-6 #scroll-section-6 .sticky-elem,
-#show-scene-7 #scroll-section-2 .sticky-elem,
+#show-scene-7 #scroll-section-7 .sticky-elem,
 #show-scene-8 #scroll-section-8 .sticky-elem{
     display: block;
     will-change: transform, opacity;
