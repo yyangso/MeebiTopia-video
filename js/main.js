@@ -103,7 +103,8 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-7'),
-                content: document.querySelector('.question-box')
+                content: document.querySelector('.question-box'),
+                items: document.querySelectorAll('question')
             }
         },
         {
@@ -260,6 +261,18 @@
                 break;
         }
     }
+    function openCloseAnswer() {
+        const answerId = this.id.replace('que', 'ans');
+
+        if(document.getElementById(answerId).style.display === 'block') {
+            document.getElementById(answerId).style.display = 'none';
+            document.getElementById(this.id + '-toggle').textContent = '+';
+        } else {
+            document.getElementById(answerId).style.display = 'block';
+            document.getElementById(this.id + '-toggle').textContent = '-';
+        }
+    }
+    sceneInfo[7].objs.items.forEach(item => item.addEventListener('click', openCloseAnswer));
 
     function scrollLoop() {
         enterNewScene = false; 

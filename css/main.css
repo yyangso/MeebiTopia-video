@@ -138,9 +138,15 @@ body.before-load {
     height: 100;
     padding-top: 0;
 }
-#scroll-section-7 h3 {
-    text-align: center;
-    padding: 5rem;
+.answer {
+    display: none;
+    padding-bottom: 30px;
+}
+#faq-title {
+    font-size: 25px;
+}
+.faq-content {
+    border-bottom: 1px solid #e0e0e0;
 }
 .question-box{
     position: relative;
@@ -152,13 +158,21 @@ body.before-load {
     color: #888;
 }
 .question {
-    position: relative;
-    max-width: 1000px;
-    margin-bottom: 50rem;
-    font-size: 2rem;
-    color: #888;
-
+    font-size: 19px;
+    padding: 30px 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    text-align: left;
 }
+.question:hover {
+    color: #2962ff;
+  }
+  [id$="-toggle"] {
+    margin-right: 15px;
+  }
 #scroll-section-8 h4 {
     position: relative;
     color: rgb(173, 173, 178);
