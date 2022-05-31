@@ -154,6 +154,7 @@ body.before-load {
     font-size: 2rem;
 }
 .faq-content {
+    padding: 0 auto;
     border-bottom: 1px solid #e0e0e0;
 }
 .question {
