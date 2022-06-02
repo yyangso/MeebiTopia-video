@@ -159,7 +159,7 @@ body.before-load {
 }
 .question {
     font-size: 2rem;
-    padding: 30px 0;
+    padding: 0;
     cursor: pointer;
     border: none;
     outline: none;
@@ -195,7 +195,7 @@ body.before-load {
     justify-content: center;
     height: 10rem;
     z-index: 20;
-    background: rgba(141, 139, 139, 0.729);
+    background: rgba(141, 139, 139, 0.908);
 }
 .sticky-elem {
     display: none;
