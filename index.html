@@ -6,69 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<title>MeebiTopia</title>
-	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link rel="stylesheet" href="./css/default.css">
+	<link rel="stylesheet" href="./css/main.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Electrolize&family=Luckiest+Guy&display=swap" rel="stylesheet">
-	<script>
-        $(function(){
-            $('.multiple-items1').slick({
-                rows: 1, // 몇 줄
-                infinite: true, // 무한반복
-                slidesToShow: 7, // 한번에 보여지는 갯수
-                slidesToScroll: 1, // 한번에 넘겨지는 갯수
-                arrows: false, // 넘기기 버튼 여부
-                speed: 2000,
-                autoplay: true, // 자동 시작
-                autoplaySpeed: 500, // 자동넘기기 시간
-                dots: false, //네비게이션 버튼
-                pauseOnHover: false, // 마우스 호버 시 슬라이드 멈춤
-                centerMode: true,
-                centerPadding: '60px',
-                variableWidth: true,   
-            });
-            $('.multiple-items2').slick({
-                rows: 1, // 몇 줄
-                rtl: true,
-                infinite: true, // 무한반복
-                slidesToShow: 7, // 한번에 보여지는 갯수
-                slidesToScroll: 1, // 한번에 넘겨지는 갯수
-                arrows: false, // 넘기기 버튼 여부
-                speed: 2000,
-                autoplay: true, // 자동 시작
-                autoplaySpeed: 500, // 자동넘기기 시간
-                dots: false, //네비게이션 버튼
-                pauseOnHover: false, // 마우스 호버 시 슬라이드 멈춤
-                centerMode: true,
-                centerPadding: '60px',
-                variableWidth: true,
-            });
 
-            $('.slide-box').each(function(i,el){
-		        i+=1;	
-		        var wrap1 = $(el).find('.multiple-items1').addClass('items1'+ i) 
-		        var wrap2 = $(el).find('.multiple-items2').addClass('items2'+ i) 
-
-	        });
-			$('.multiple-items3').slick({
-                rows: 1, // 몇 줄
-                infinite: true, // 무한반복
-                slidesToShow: 7, // 한번에 보여지는 갯수
-                slidesToScroll: 1, // 한번에 넘겨지는 갯수
-                arrows: false, // 넘기기 버튼 여부
-                speed: 2000,
-                autoplay: true, // 자동 시작
-                autoplaySpeed: 500, // 자동넘기기 시간
-                dots: false, //네비게이션 버튼
-                pauseOnHover: false, // 마우스 호버 시 슬라이드 멈춤
-                centerMode: true,
-                centerPadding: '60px',
-                variableWidth: true,   
-            });
-        });
-    </script>
 </head>
 <body class="before-load" style="background-color: black;">
 	<div class="loading">
@@ -115,75 +56,54 @@
 			</div>
 		</section>
 		<section class="scroll-section" id="scroll-section-3">
-			<div class="slide-box">
-				<h3>MeebiTopia</h3>
-				<div class="for_slick_slider multiple-items1">
-					<div class="items">
-						<img src="images/1.png" alt="">   
-						<div class="overlay"></div> 
+			<div class="slider">
+				<div class="slide-track">
+					<div class="slide">
+						<img src="./images/1.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/2.png" alt="">
-						<div class="overlay"></div>     
+					<div class="slide">
+						<img src="./images/2.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
+					<div class="slide">
+						<img src="./images/3.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/4.png" alt=""> 
-						<div class="overlay"></div>    
+					<div class="slide">
+						<img src="./images/4.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/5.png" alt=""> 
-						<div class="overlay"></div>    
+					<div class="slide">
+						<img src="./images/5.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
+					<div class="slide">
+						<img src="./images/1.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/5.png" alt=""> 
-						<div class="overlay"></div>    
+					<div class="slide">
+						<img src="./images/2.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
+					<div class="slide">
+						<img src="./images/3.png" width="230px" height="250px">
 					</div>
-				</div>
-				<div class="for_slick_slider multiple-items2" dir="rtl">
-					<div class="items">
-						<img src="images/1.png" alt="">   
-						<div class="overlay"></div> 
+					<div class="slide">
+						<img src="./images/4.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/2.png" alt="">
-						<div class="overlay"></div>     
+					<div class="slide">
+						<img src="./images/5.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
+					<div class="slide">
+						<img src="./images/1.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/4.png" alt=""> 
-						<div class="overlay"></div>    
+					<div class="slide">
+						<img src="./images/2.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/5.png" alt=""> 
-						<div class="overlay"></div>    
+					<div class="slide">
+						<img src="./images/3.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
+					<div class="slide">
+						<img src="./images/4.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/5.png" alt=""> 
-						<div class="overlay"></div>    
+					<div class="slide">
+						<img src="./images/5.png" width="230px" height="250px">
 					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
-					</div>
+		
 				</div>
 			</div>
 		</section>
@@ -200,53 +120,69 @@
 			<p class="no-message">
 				<strong>캐릭터 만들어 지는 과정 이미지</strong>
 			</p>
-			<img src="./images/1.png" width="250" height="200">
+			<img src="./images/1.png" width="230px" height="250px">
 		</div>
 		</section>
 		<section class="scroll-section" id="scroll-section-6">
-			<div class="slide-box">
-				<h3>MeebiTopia 캐릭터 슬라이드</h3>
-				<div class="for_slick_slider multiple-items3">
-					<div class="items">
-						<img src="images/1.png" alt="">   
-						<div class="overlay"></div> 
-					</div>
-					<div class="items">
-						<img src="images/2.png" alt="">
-						<div class="overlay"></div>     
-					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
-					</div>
-					<div class="items">
-						<img src="images/4.png" alt=""> 
-						<div class="overlay"></div>    
-					</div>
-					<div class="items">
-						<img src="images/5.png" alt=""> 
-						<div class="overlay"></div>    
-					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
-					</div>
-					<div class="items">
-						<img src="images/5.png" alt=""> 
-						<div class="overlay"></div>    
-					</div>
-					<div class="items">
-						<img src="images/3.png" alt="">  
-						<div class="overlay"></div>   
-					</div>
-				</div>
-			</section>
+			<p class="slide-message">
+				<strong>캐릭터</strong>
+			</p>
+		<div class="slide-box">
+			<div class="slide-mbits">
+			<div class="mbits">
+				<img src="./images/1.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/2.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/3.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/4.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/5.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/1.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/2.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/3.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/4.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/5.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/1.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/2.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/3.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/4.png" width="230px" height="250px">
+			</div>
+			<div class="mbits">
+				<img src="./images/5.png" width="230px" height="250px">
+			</div>
+		</div>
+		</div>
+		</section>
 		<section class="scroll-section" id="scroll-section-7">
 			<div class="question-box">
 				<span id="faq-title">자주 묻는 질문</span>
 				<div class="faq-content">
-					<buttion class="question" id="que-1"><span id="que-1-toggle">+</span><span>when mint?</span></buttion>
-					<div class="answer" id="ans-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, explicabo!</div>
+					<buttion class="question" id="que-1"><span id="que-1-toggle">+</span><span>클릭해보슈</span></buttion>
+					<div class="answer" id="ans-1">ㅗ^^ㅗ</div>
 				</div>
 				<div class="faq-content">
 					<buttion class="question" id="que-2"><span id="que-2-toggle">+</span><span>what is the mint price?</span></buttion>
@@ -276,7 +212,7 @@
 		</footer>
 	</div>
 
-	<script src="js/main.js"></script>
+	<script src="./js/main.js"></script>
 	<script src="https://kit.fontawesome.com/246bf15a6b.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -63,7 +63,8 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-3'),
-                content: document.querySelector('.slide-box')
+                content: document.querySelector('.slider'),
+                slides: document.querySelector('.slide-track')
             }
         },
         {
@@ -93,7 +94,8 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-6'),
-                content: document.querySelector('.slide-box')
+                content: document.querySelector('.slide-box'),
+                slides: document.querySelector('.slide-mbits')
             }
         },
         {
@@ -126,6 +128,7 @@
             }
         }
     ];
+
 
     function setCanvasImages() {
         let imgElem;
@@ -219,6 +222,42 @@
 
     }
 
+    function makeClone() {
+        var slides = document.querySelector('.slide-track');
+        var slide = document.querySelectorAll('.slide');
+        var slideCount = slide.length;
+        var slides1 = document.querySelector('.slide-mbits');
+        var slide1 = document.querySelectorAll('.mbits');
+        var slideCount1 = slide1.length;
+    
+        for(var i = 0; i < slideCount; i++) {
+            //a.cloneNode() : a 요소 복사 , a.cloneNode(true) : a의 자식요소까지 모두 복사
+            var cloneSlide = slide[i].cloneNode(true);
+            cloneSlide.classList.add('clone');
+            //a.appendChild(b) : a 요소 뒤에 b를 추가
+            slides.appendChild(cloneSlide);
+        }
+        for(var i = slideCount -1; i >= 0; i--) {
+            var cloneSlide = slide[i].cloneNode(true);
+            cloneSlide.classList.add('clone');
+            //a.prepend(b) : a 요소 앞에 b를 추가
+            slides.prepend(cloneSlide);
+        }
+        for(var i = slideCount1 -1; i >= 0; i--) {
+            var cloneSlide1 = slide1[i].cloneNode(true);
+            cloneSlide1.classList.add('clone');
+            //a.prepend(b) : a 요소 앞에 b를 추가
+            slides1.prepend(cloneSlide1);
+        }
+        for(var i = slideCount1 -1; i >= 0; i--) {
+            var cloneSlide1 = slide1[i].cloneNode(true);
+            cloneSlide1.classList.add('clone');
+            //a.prepend(b) : a 요소 앞에 b를 추가
+            slides1.prepend(cloneSlide1);
+        }
+    }
+    makeClone();
+    
     function playAnimation() {
         const objs = sceneInfo[currentScene].objs;
         const values = sceneInfo[currentScene].values;
@@ -321,6 +360,7 @@
                 rafState = false;
             }
         }
+
 
     window.addEventListener('load', () => {
         document.body.classList.remove('before-load');
