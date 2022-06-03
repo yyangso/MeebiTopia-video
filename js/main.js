@@ -63,8 +63,7 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-3'),
-                content: document.querySelector('.slider'),
-                slides: document.querySelector('.slide-track')
+                content: document.querySelector('.slider')
             }
         },
         {
@@ -94,8 +93,7 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-6'),
-                content: document.querySelector('.slide-box'),
-                slides: document.querySelector('.slide-mbits')
+                content: document.querySelector('.slide-box')
             }
         },
         {
