@@ -135,29 +135,30 @@ body.before-load {
 }
 .question-box {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 1000px;
-    margin: 0 2rem;
+    margin: 0 1.5rem;
     color: #ccc;
 }
 .answer {
     display: none;
     height: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 #faq-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .faq-content {
-    font-size: 2em;
+    font-size: 1rem;
+    margin: 2rem auto;
     border-bottom: 1px solid #e0e0e0;
 }
 .question {
-    font-size: 2rem;
-    padding: 0;
+    font-size: 1.5rem;
     cursor: pointer;
     border: none;
     outline: none;
@@ -476,9 +477,20 @@ body.before-load {
         font-size: 4vw;
     }
     .question-box {
-        width: 1000px;
-        margin: 0 2rem;
+        width: 80%;
+        margin-left: 8vw;
         justify-content: center;
         font-size: 4vw;
+    }
+    .faq-content {
+        font-size: 2vw;
+    }
+    .question {
+        font-size: 1.5svw;
+    }
+    .answer {
+        font-size: 2vw;
+        padding-left: 2vw;
+        margin: 1vw auto;
     }
 }
