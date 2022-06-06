@@ -63,7 +63,8 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-3'),
-                content: document.querySelector('.slider')
+                content: document.querySelector('.track-box')
+
             }
         },
         {
@@ -227,6 +228,9 @@
         var slides1 = document.querySelector('.slide-mbits');
         var slide1 = document.querySelectorAll('.mbits');
         var slideCount1 = slide1.length;
+        var slides2 = document.querySelector('.slide-rtl');
+        var slide2 = document.querySelectorAll('.rtl');
+        var slideCount2 = slide2.length;
     
         for(var i = 0; i < slideCount; i++) {
             //a.cloneNode() : a 요소 복사 , a.cloneNode(true) : a의 자식요소까지 모두 복사
@@ -252,6 +256,18 @@
             cloneSlide1.classList.add('clone');
             //a.prepend(b) : a 요소 앞에 b를 추가
             slides1.prepend(cloneSlide1);
+        }
+        for(var i = slideCount2 -1; i >= 0; i--) {
+            var cloneSlide2 = slide2[i].cloneNode(true);
+            cloneSlide2.classList.add('clone');
+            //a.prepend(b) : a 요소 앞에 b를 추가
+            slides2.prepend(cloneSlide2);
+        }
+        for(var i = slideCount2 -1; i >= 0; i--) {
+            var cloneSlide2 = slide2[i].cloneNode(true);
+            cloneSlide2.classList.add('clone');
+            //a.prepend(b) : a 요소 앞에 b를 추가
+            slides2.prepend(cloneSlide2);
         }
     }
     makeClone();

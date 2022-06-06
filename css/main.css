@@ -104,14 +104,14 @@ body.before-load {
     text-align: center;
 }
 .mid-message {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    font-size: 2rem;
+    max-width: 800px;
+    margin: auto;
+    font-size: 1rem;
     color: #888;
 }
 .mid-message strong {
     color: rgb(173, 173, 178);
+    font-size: 5rem;
 }
 .no-message-box {
     position: relative;
@@ -122,6 +122,10 @@ body.before-load {
     color: rgb(173, 173, 178);
     font-size: 2rem;
     padding-top: 0;
+}
+#scroll-section-4 {
+    position: relative;
+    margin: auto;
 }
 #scroll-section-5 {
     position: relative;
@@ -275,7 +279,7 @@ body.before-load {
 }
 .slider{
     height: 300px;
-    margin: auto;
+    margin-top: 0;
     position: relative;
     width: 100%;
     display: flex;
@@ -329,8 +333,65 @@ body.before-load {
     top: 0;
     transform: rotateZ(180deg);
 }
-.slide-box{
+.slider-rtl{
     height: 300px;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    place-items: center;
+    overflow: hidden;
+}
+.slide-rtl {
+    display: flex;
+    width: calc(250px * 30);
+    animation: scroll 35s linear infinite;
+    animation-direction: reverse;
+    /* slide track width = 슬라이드 개수 x 슬라이드 width */
+}
+.rtl {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+.rtl img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 40px;
+    transition: transform 1s;
+}
+.rtl img:hover {
+    cursor: pointer;
+    transform: translateZ(15px);
+    border: 1px solid black;
+    border-radius: 40px;
+}
+
+/* gradient shadows */
+
+.slider-rtl::before,
+.slider-rtl::after {
+    background: linear-gradient(to right, rgba(23, 22, 22, 0.598) 0%, rgba(121, 119, 119, 0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 10%;
+    z-index: 9;
+}
+.slider-rtl::before {
+    left: 0;
+    top: 0;
+}
+.slider-rtl::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.slide-box{
+    height: 355px;
     margin: auto;
     position: relative;
     width: 100%;
@@ -347,7 +408,7 @@ body.before-load {
 }
 .slide-mbits {
     display: flex;
-    width: calc(250px * 30);
+    width: calc(300px * 30);
     animation: scroll 30s linear infinite;
     /* slide track width = 슬라이드 개수 x 슬라이드 width */
 }
@@ -361,8 +422,8 @@ body.before-load {
     }
 } 
 .mbits {
-    height: 200px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     display: flex;
     align-items: center;
     padding: 15px;
