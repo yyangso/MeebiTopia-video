@@ -74,7 +74,7 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-4'),
-                content: document.querySelector('.mid-message-box')
+                content: document.querySelector('.mid-message-box','mid-message')
             }
         },
         {
@@ -84,7 +84,7 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-5'),
-                content: document.querySelector('.no-message-box')
+                content: document.querySelector('.no-message-box','no-message')
             }
         },
         {
