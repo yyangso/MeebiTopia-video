@@ -284,6 +284,9 @@ body.before-load {
     animation: scroll 35s linear infinite;
     /* slide track width = 슬라이드 개수 x 슬라이드 width */
 }
+.slide-track:hover{
+    animation-play-state: paused;
+}
 .slide {
     height: 200px;
     width: 250px;
@@ -340,6 +343,9 @@ body.before-load {
     animation: scroll 35s linear infinite;
     animation-direction: reverse;
     /* slide track width = 슬라이드 개수 x 슬라이드 width */
+}
+.slide-rtl:hover {
+    animation-play-state: paused;
 }
 .rtl {
     height: 200px;
@@ -403,6 +409,9 @@ body.before-load {
     width: calc(300px * 30);
     animation: scroll 30s linear infinite;
     /* slide track width = 슬라이드 개수 x 슬라이드 width */
+}
+.slide-mbits:hover {
+    animation-play-state: paused;
 }
 @keyframes scroll {
     0% {
