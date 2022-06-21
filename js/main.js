@@ -374,6 +374,19 @@
                 rafState = false;
             }
         }
+        
+        var vid = document.getElementById("video");
+
+        function playVid() {
+            if (currentScene === 1) {
+                vid.play();
+            }  
+        }
+        function pauseVid() {
+            if (!currentScene === 1) {
+                vid.pause();
+            }
+        }
 
 
     window.addEventListener('load', () => {
