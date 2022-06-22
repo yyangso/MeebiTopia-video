@@ -51,7 +51,7 @@
             },
             values: {
                 videoImageCount: 337,
-                imageSequence: [0, 338],
+                imageSequence: [0, 336],
                 canvas_opacity_in: [0, 1, {start: 0, end: 0.1}],
                 canvas_opacity_out: [1, 0, {start: 0.95, end: 1}]
             }
