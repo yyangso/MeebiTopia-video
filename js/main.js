@@ -99,22 +99,33 @@
         },
         {
             //7
-            type: 'sticky',
-            heightNum: 2.5, //브라우저 높이의 5배로 scrollHeight 세팅
+            type: 'normal',
+            // heightNum: 5, //브라우저 높이의 5배로 scrollHeight 세팅
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-7'),
-                content: document.querySelector('.question-box','.faq-content'),
-                items: document.querySelectorAll('.question')
+                content: document.querySelector('.map')
             }
         },
         {
             //8
             type: 'sticky',
-            heightNum: 5, //브라우저 높이의 5배로 scrollHeight 세팅
+            heightNum: 2.5, //브라우저 높이의 5배로 scrollHeight 세팅
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-8'),
+                content: document.querySelector('.question-box','.faq-content'),
+                items: document.querySelectorAll('.question')
+            }
+        },
+        
+        {
+            //9
+            type: 'sticky',
+            heightNum: 5, //브라우저 높이의 5배로 scrollHeight 세팅
+            scrollHeight: 0,
+            objs: {
+                container: document.querySelector('#scroll-section-9'),
                 canvas: document.querySelector('#video-canvas-2'),
                 context: document.querySelector('#video-canvas-2').getContext('2d'),
                 videoImages: []
@@ -143,11 +154,11 @@
             imgElem2.src = `./video/2/IMG_${7027 + i}.jpg`;
             sceneInfo[2].objs.videoImages.push(imgElem2);
         }
-        let imgElem8;
-        for (let i = 0; i < sceneInfo[8].values.videoImageCount; i++) {
-            imgElem8 = new Image();
-            imgElem8.src = `./video/1/IMG_${1 + i}.jpg`;
-            sceneInfo[8].objs.videoImages.push(imgElem8);
+        let imgElem9;
+        for (let i = 0; i < sceneInfo[9].values.videoImageCount; i++) {
+            imgElem9 = new Image();
+            imgElem9.src = `./video/1/IMG_${1 + i}.jpg`;
+            sceneInfo[9].objs.videoImages.push(imgElem9);
         }
     }
     
@@ -188,7 +199,7 @@
         console.log(heightRatio);
         sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(1)`;
         sceneInfo[2].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(1)`;
-        sceneInfo[8].objs.canvas.style.transform = `translate3d(-50%, -55%, 0) scale(1)`;
+        sceneInfo[9].objs.canvas.style.transform = `translate3d(-50%, -55%, 0) scale(1)`;
         
     }
 
@@ -303,7 +314,7 @@
 				}          
                 break;
 
-            case 8:
+            case 9:
                 if (scrollRatio <= 0.5) {
 					// in
 					objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
@@ -326,7 +337,7 @@
         }
     }
 
-    sceneInfo[7].objs.items.forEach(item => item.addEventListener('click', openCloseAnswer));
+    sceneInfo[8].objs.items.forEach(item => item.addEventListener('click', openCloseAnswer));
 
     function scrollLoop() {
         enterNewScene = false; 
@@ -355,7 +366,7 @@
         function loop() {
             delayedYOffset = delayedYOffset + (yOffset - delayedYOffset) * acc;
             if (!enterNewScene) { //새로운 씬에 들어가지 않는 순간에 실행
-                if (currentScene === 0 || currentScene === 2 || currentScene === 8) {
+                if (currentScene === 0 || currentScene === 2 || currentScene === 9) {
                     const currentYOffset = delayedYOffset - prevScrollHeight;
                     const objs = sceneInfo[currentScene].objs;
                     const values = sceneInfo[currentScene].values;

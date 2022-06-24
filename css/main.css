@@ -17,13 +17,10 @@ p {
     color: rgb(195, 195, 201);
 }
 a {
-	color: rgb(104, 104, 106);
+	color: #006692;
 	text-decoration: none;
-}
-li { 
-    line-height: 2;
-    text-align: center;
-    color: rgb(195, 195, 201);
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 body.before-load {
     overflow: hidden;
@@ -33,13 +30,15 @@ body.before-load {
     overflow-x: hidden;
 }
 .global-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 11;
+    z-index: 1;
     width: 100%;
     height: 44px;
     padding: 0 1rem;
+    letter-spacing: 0.1rem;
+    
 }
 .local-nav {
     position: absolute;
@@ -69,6 +68,8 @@ body.before-load {
     height: 100%;
     margin: 0 auto;
     font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 30px #fff;
     justify-content: space-between;
 }
 .local-nav-links {
@@ -81,11 +82,12 @@ body.before-load {
 
 .local-nav-links .product-name {
     margin: auto;
+    z-index: 15;
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 30px #fff;
-    padding-left: 10rem;
+    padding-left: 9.5rem;
     animation: flicker 1.5s infinite alternate;
 }
 @keyframes flicker {
@@ -166,6 +168,17 @@ body.before-load {
     max-width: 800px;
     height: 100%;
 }
+.map {
+    position: relative;
+    width: 100%;
+    margin: 5rem auto;
+}
+.map strong {
+    color: #fff;
+    text-shadow: 0 0 2px #fff, 0 0 7px #fff, 0 0 30px #fff;
+    font-size: 2.5rem;
+    padding: 5rem;
+}
 .question-box {
     position: relative;
     width: 90%;
@@ -189,7 +202,7 @@ body.before-load {
 .faq-content {
     font-size: 1rem;
     margin: 2rem 3rem;
-    border-bottom: 0.5px solid white;
+    border-bottom: 0.5px solid #ccc;
 }
 #span {
     text-align: center;
@@ -214,14 +227,6 @@ body.before-load {
     font-size: 1.2rem;
     padding: 0 2rem;
 }
-.footer {
-    display: flex;
-    margin-top: 30rem;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    background: rgb(141, 139, 139);
-}
 .sticky-elem {
     display: none;
     position: fixed;
@@ -237,7 +242,8 @@ body.before-load {
 #show-scene-5 #scroll-section-5 .sticky-elem,
 #show-scene-6 #scroll-section-6 .sticky-elem,
 #show-scene-7 #scroll-section-7 .sticky-elem,
-#show-scene-8 #scroll-section-8 .sticky-elem{
+#show-scene-8 #scroll-section-8 .sticky-elem,
+#show-scene-9 #scroll-section-9 .sticky-elem{
     display: block;
     will-change: transform, opacity;
 }
@@ -339,7 +345,7 @@ body.before-load {
     height: auto;
     border: 7px solid transparent;
     border-radius: 40px;
-    background-image: linear-gradient(#444444, #444444), linear-gradient(to right, #f1f6f6ee, #76d2fdcb, #5969f9c0,#8107fccd);
+    background-image: linear-gradient(#444444, #444444), linear-gradient(to right, #f1f6f6ee, #00f2ffcb, #0a95f8c0,#0755fc);
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff;
@@ -404,7 +410,7 @@ body.before-load {
     height: auto;
     border: 7px solid transparent;
     border-radius: 40px;
-    background-image: linear-gradient(#444444, #444444), linear-gradient(to right, #9a07fc,  #5969f9c0, #76d2fdcb, #f1f6f6ee);
+    background-image: linear-gradient(#444444, #444444), linear-gradient(to right, #9207fc,  #bd01f7, #fb29cab5, #f1f6f6ee);
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff;
@@ -492,7 +498,7 @@ body.before-load {
     max-width: 100%;
     height: auto;
     border: 8px solid transparent;
-    background-image: linear-gradient(#444444, #444444), linear-gradient(to right, #fcfcfbe0, #fee16d, #e0c40dea,#fff200);
+    background-image: linear-gradient(#444444, #444444), linear-gradient(to right, #fcfcfbe0, #fee16d, #e0c40dea,#db8204);
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff;
@@ -526,18 +532,29 @@ body.before-load {
     top: 0;
     transform: rotateZ(180deg);
 }
+.footer {
+    display: flex;
+    margin-top: 30rem;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    background: rgb(141, 139, 139);
+}
 @media (min-width: 1024px) {
     .local-nav-links {
+        display: flex;
         margin: 0 auto;
-        justify-content: center;
     }
     .local-nav-links a:not(.product-name){
-        margin-left: 1.5vw;
+        margin-left: 1vw;
+        justify-content: flex-end;
     }
     .local-nav-links .product-name {
-        text-align: center;
-        font-size: 2vw;
-        letter-spacing: 0.1vw;
+        display: flex;
+        justify-content: center;
+        font-size: 2.5vw;
+        letter-spacing: 0.2vw;
+        padding-left: 15vw;
     }
     #scroll-section-0 h1 {
         font-size: 9vw;
@@ -568,6 +585,10 @@ body.before-load {
         margin-left: 6vw;
     }
     .slide-message strong {
+        font-size: 4vw;
+        margin-left: 6vw;
+    }
+    .map strong {
         font-size: 4vw;
         margin-left: 6vw;
     }
