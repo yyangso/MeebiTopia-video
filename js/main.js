@@ -50,8 +50,8 @@
                 videoImages: []
             },
             values: {
-                videoImageCount: 337,
-                imageSequence: [0, 336],
+                videoImageCount: 300,
+                imageSequence: [0, 299],
                 canvas_opacity_in: [0, 1, {start: 0, end: 0.1}],
                 canvas_opacity_out: [1, 0, {start: 0.95, end: 1}]
             }
@@ -144,20 +144,20 @@
         let imgElem;
         for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
             imgElem = new Image();
-            imgElem.src = `./video/1/IMG_${1 + i}.jpg`;
+            imgElem.src = `./video/1/IMG_${0 + i}.png`;
             sceneInfo[0].objs.videoImages.push(imgElem);
         }
         
         let imgElem2;
         for (let i = 0; i < sceneInfo[2].values.videoImageCount; i++) {
             imgElem2 = new Image();
-            imgElem2.src = `./video/2/IMG_${7027 + i}.jpg`;
+            imgElem2.src = `./video/2/IMG_${1 + i}.jpg`;
             sceneInfo[2].objs.videoImages.push(imgElem2);
         }
         let imgElem9;
         for (let i = 0; i < sceneInfo[9].values.videoImageCount; i++) {
             imgElem9 = new Image();
-            imgElem9.src = `./video/1/IMG_${1 + i}.jpg`;
+            imgElem9.src = `./video/1/IMG_${0 + i}.png`;
             sceneInfo[9].objs.videoImages.push(imgElem9);
         }
     }

@@ -534,7 +534,6 @@ body.before-load {
 }
 .footer {
     display: flex;
-    margin-top: 30rem;
     align-items: center;
     justify-content: center;
     height: 3rem;
