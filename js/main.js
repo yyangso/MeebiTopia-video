@@ -45,6 +45,11 @@
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-2'),
+                messageA: document.querySelector('#scroll-section-2 .main-message.a'),
+                messageB: document.querySelector('#scroll-section-2 .main-message.b'),
+                messageC: document.querySelector('#scroll-section-2 .main-message.c'),
+                messageD: document.querySelector('#scroll-section-2 .main-message.d'),
+                messageE: document.querySelector('#scroll-section-2 .main-message.e'),
                 canvas: document.querySelector('#video-canvas-1'),
                 context: document.querySelector('#video-canvas-1').getContext('2d'),
                 videoImages: []
@@ -53,7 +58,27 @@
                 videoImageCount: 300,
                 imageSequence: [0, 299],
                 canvas_opacity_in: [0, 1, {start: 0, end: 0.1}],
-                canvas_opacity_out: [1, 0, {start: 0.95, end: 1}]
+                canvas_opacity_out: [1, 0, {start: 0.95, end: 1}],
+                messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+				messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
+				messageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
+				messageD_opacity_in: [0, 1, { start: 0.7, end: 0.8 }],
+                messageE_opacity_in: [0, 1, { start: 0.9, end: 0.93 }],
+				messageA_translateY_in: [200, 0, { start: 0.1, end: 0.2 }],
+				messageB_translateY_in: [145, 0, { start: 0.3, end: 0.4 }],
+				messageC_translateY_in: [120, 0, { start: 0.5, end: 0.6 }],
+				messageD_translateY_in: [60, 0, { start: 0.7, end: 0.8 }],
+                messageE_translateY_in: [10, 0, { start: 0.9, end: 0.93 }],
+				messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+				messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
+				messageC_opacity_out: [1, 0, { start: 0.65, end: 0.7 }],
+				messageD_opacity_out: [1, 0, { start: 0.85, end: 0.9 }],
+                messageE_opacity_out: [1, 0, { start: 0.95, end: 0.96 }],
+				messageA_translateY_out: [0, -200, { start: 0.23, end: 0.3 }],
+				messageB_translateY_out: [0, -145, { start: 0.45, end: 0.5 }],
+				messageC_translateY_out: [0, -120, { start: 0.65, end: 0.7 }],
+				messageD_translateY_out: [0, -60, { start: 0.85, end: 0.9 }],
+                messageE_translateY_out: [0, -10, { start: 0.95, end: 0.96 }]
             }
         },
         {
@@ -297,21 +322,70 @@
                 //let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
                 //objs.context.drawImage(objs.videoImages[sequence], 0, 0);
                 objs.canvas.style.opacity = calcValues(values.canvas_opacity, currentYOffset);
-
+                
                 break;
 
             case 2:
                 //console.log('2 play');
                 //let sequence2 = Math.round(calcValues(values.imageSequence, currentYOffset));
                 //objs.context.drawImage(objs.videoImages[sequence2], 0, 0);
-                // currentScene 3에서 쓰는 캔버스를 미리 그려주기 시작
+                // objs.canvas.style.opacity = calcValues(values.canvas_opacity, currentYOffset);
+
                 if (scrollRatio <= 0.5) {
 					// in
 					objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
 				} else {
 					// out
 					objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-				}          
+				}  
+				if (scrollRatio <= 0.22) {
+					// in
+					objs.messageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
+					objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_in, currentYOffset)}%, 0)`;
+				} else {
+					// out
+					// objs.messageA.style.opacity = calcValues(values.messageA_opacity_out, currentYOffset);
+					objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_out, currentYOffset)}%, 0)`;
+				}
+
+				if (scrollRatio <= 0.42) {
+					// in
+					objs.messageB.style.opacity = calcValues(values.messageB_opacity_in, currentYOffset);
+					objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_in, currentYOffset)}%, 0)`;
+				} else {
+					// out
+					// objs.messageB.style.opacity = calcValues(values.messageB_opacity_out, currentYOffset);
+					objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_out, currentYOffset)}%, 0)`;
+				}
+
+				if (scrollRatio <= 0.62) {
+					// in
+					objs.messageC.style.opacity = calcValues(values.messageC_opacity_in, currentYOffset);
+					objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_in, currentYOffset)}%, 0)`;
+				} else {
+					// out
+					// objs.messageC.style.opacity = calcValues(values.messageC_opacity_out, currentYOffset);
+					objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_out, currentYOffset)}%, 0)`;
+				}
+
+				if (scrollRatio <= 0.82) {
+					// in
+					objs.messageD.style.opacity = calcValues(values.messageD_opacity_in, currentYOffset);
+					objs.messageD.style.transform = `translate3d(0, ${calcValues(values.messageD_translateY_in, currentYOffset)}%, 0)`;
+				} else {
+					// out
+					// objs.messageD.style.opacity = calcValues(values.messageD_opacity_out, currentYOffset);
+					objs.messageD.style.transform = `translate3d(0, ${calcValues(values.messageD_translateY_out, currentYOffset)}%, 0)`;
+				}
+                if (scrollRatio <= 0.92) {
+					// in
+					objs.messageE.style.opacity = calcValues(values.messageE_opacity_in, currentYOffset);
+					objs.messageE.style.transform = `translate3d(0, ${calcValues(values.messageE_translateY_in, currentYOffset)}%, 0)`;
+				} else {
+					// out
+					// objs.messageE.style.opacity = calcValues(values.messageE_opacity_out, currentYOffset);
+					objs.messageE.style.transform = `translate3d(0, ${calcValues(values.messageE_translateY_out, currentYOffset)}%, 0)`;
+				}      
                 break;
 
             case 9:
